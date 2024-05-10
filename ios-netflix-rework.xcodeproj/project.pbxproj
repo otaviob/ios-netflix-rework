@@ -10,7 +10,6 @@
 		E0F8E9562BEE3C350043D19E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8E9552BEE3C350043D19E /* AppDelegate.swift */; };
 		E0F8E9582BEE3C350043D19E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8E9572BEE3C350043D19E /* SceneDelegate.swift */; };
 		E0F8E95A2BEE3C350043D19E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8E9592BEE3C350043D19E /* ViewController.swift */; };
-		E0F8E95D2BEE3C350043D19E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F8E95B2BEE3C350043D19E /* Main.storyboard */; };
 		E0F8E95F2BEE3C360043D19E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0F8E95E2BEE3C360043D19E /* Assets.xcassets */; };
 		E0F8E9622BEE3C360043D19E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F8E9602BEE3C360043D19E /* LaunchScreen.storyboard */; };
 		E0F8E96D2BEE3C360043D19E /* ios_netflix_reworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8E96C2BEE3C360043D19E /* ios_netflix_reworkTests.swift */; };
@@ -40,7 +39,6 @@
 		E0F8E9552BEE3C350043D19E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F8E9572BEE3C350043D19E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E0F8E9592BEE3C350043D19E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E0F8E95C2BEE3C350043D19E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0F8E95E2BEE3C360043D19E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0F8E9612BEE3C360043D19E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0F8E9632BEE3C360043D19E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				E0F8E9552BEE3C350043D19E /* AppDelegate.swift */,
 				E0F8E9572BEE3C350043D19E /* SceneDelegate.swift */,
 				E0F8E9592BEE3C350043D19E /* ViewController.swift */,
-				E0F8E95B2BEE3C350043D19E /* Main.storyboard */,
 				E0F8E95E2BEE3C360043D19E /* Assets.xcassets */,
 				E0F8E9602BEE3C360043D19E /* LaunchScreen.storyboard */,
 				E0F8E9632BEE3C360043D19E /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				E0F8E9622BEE3C360043D19E /* LaunchScreen.storyboard in Resources */,
 				E0F8E95F2BEE3C360043D19E /* Assets.xcassets in Resources */,
-				E0F8E95D2BEE3C350043D19E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E0F8E95B2BEE3C350043D19E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E0F8E95C2BEE3C350043D19E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E0F8E9602BEE3C360043D19E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,7 +434,7 @@
 				INFOPLIST_FILE = "ios-netflix-rework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,7 +461,7 @@
 				INFOPLIST_FILE = "ios-netflix-rework/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
