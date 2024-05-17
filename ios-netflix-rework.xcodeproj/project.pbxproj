@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E02F6B202BF5150F009ABDC1 /* HeroHeaderUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02F6B1F2BF5150F009ABDC1 /* HeroHeaderUiView.swift */; };
 		E03D39752BF0C06100CC5E2C /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03D39742BF0C06100CC5E2C /* CollectionViewTableViewCell.swift */; };
 		E0F8E9562BEE3C350043D19E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8E9552BEE3C350043D19E /* AppDelegate.swift */; };
 		E0F8E9582BEE3C350043D19E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F8E9572BEE3C350043D19E /* SceneDelegate.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E02F6B1F2BF5150F009ABDC1 /* HeroHeaderUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUiView.swift; sourceTree = "<group>"; };
 		E03D39742BF0C06100CC5E2C /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		E0F8E9522BEE3C350043D19E /* ios-netflix-rework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-netflix-rework.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F8E9552BEE3C350043D19E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				E03D39742BF0C06100CC5E2C /* CollectionViewTableViewCell.swift */,
+				E02F6B1F2BF5150F009ABDC1 /* HeroHeaderUiView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				E03D39752BF0C06100CC5E2C /* CollectionViewTableViewCell.swift in Sources */,
 				E0F8E98F2BEE47280043D19E /* DownloadsViewController.swift in Sources */,
 				E0F8E9562BEE3C350043D19E /* AppDelegate.swift in Sources */,
+				E02F6B202BF5150F009ABDC1 /* HeroHeaderUiView.swift in Sources */,
 				E0F8E9582BEE3C350043D19E /* SceneDelegate.swift in Sources */,
 				E0F8E98B2BEE462B0043D19E /* UpcomingViewController.swift in Sources */,
 				E0F8E9892BEE45D90043D19E /* HomeViewController.swift in Sources */,
