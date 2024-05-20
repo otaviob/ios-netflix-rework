@@ -61,12 +61,23 @@ class HomeViewController: UIViewController {
 //            
 //        }
         
-        APICaller.shared.getTrendingTvs { result in
+//        APICaller.shared.getTrendingTvs { result in
+        
+//        APICaller.shared.getUpcomingMovies { Result<[Movie], Error> in
+//            <#code#>
+//        }
             
+        
+//        APICaller.shared.getPopular { _ in
+//            <#code#>
+//        }
             
+//        APICaller.shared.getTopRated { _ in
+//            <#code#>
+//        }
         }
     }
-}
+
     
     
     
