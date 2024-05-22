@@ -1,17 +1,17 @@
 //
-//  Tv.swift
+//  Movie.swift
 //  ios-netflix-rework
 //
-//  Created by Otavio Brito on 20/5/2024.
+//  Created by Otavio Brito on 19/5/2024.
 //
 
 import Foundation
 
-struct TrendingTvResponse: Codable {
-    let results: [Tv]
+struct TrendingTitleResponse: Codable {
+    let results: [Title]
 }
 
-struct Tv: Codable {
+struct Title: Codable {
     let id: Int
     let media_type: String?
     let original_name: String?
