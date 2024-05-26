@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SDWebImage
 
-class TtitleCollectionViewCell: UICollectionViewCell {
+class TitleCollectionViewCell: UICollectionViewCell {
 
     static let identifier = "TitleCollectionViewCell"
     
@@ -29,6 +30,16 @@ class TtitleCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         posterImageView.frame = contentView.bounds
+    }
+    
+    public func configure(with model: String) {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model)") else {
+            return
+        }
+        
+        posterImageView.sd_setImage(with: url, completed: nil)
+        
+        
     }
 
 }
