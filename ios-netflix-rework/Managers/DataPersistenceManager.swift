@@ -17,7 +17,7 @@ class DataPersistenceManager {
         case failedToFetchData
         case failedToDeleteData
     }
-    
+        
     static let shared = DataPersistenceManager()
     
     

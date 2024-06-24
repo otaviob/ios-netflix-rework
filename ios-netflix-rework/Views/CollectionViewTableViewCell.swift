@@ -7,12 +7,13 @@
 
 import UIKit
 
+
 protocol CollectionViewTableViewCellDelegate: AnyObject {
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel)
 }
 
 class CollectionViewTableViewCell: UITableViewCell {
-    
+
     static let identifier = "CollectionViewTableViewCell"
     
     weak var delegate: CollectionViewTableViewCellDelegate?
@@ -26,18 +27,14 @@ class CollectionViewTableViewCell: UITableViewCell {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
         return collectionView
-        
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .systemPink
         contentView.addSubview(collectionView)
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        
     }
     
     
@@ -48,34 +45,37 @@ class CollectionViewTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         collectionView.frame = contentView.bounds
-        
     }
+    
     
     public func configure(with titles: [Title]) {
         self.titles = titles
-        DispatchQueue.main.sync { [weak self] in
+        DispatchQueue.main.async { [weak self] in
             self?.collectionView.reloadData()
         }
-        
     }
     
     private func downloadTitleAt(indexPath: IndexPath) {
         
+    
         DataPersistenceManager.shared.downloadTitleWith(model: titles[indexPath.row]) { result in
             switch result {
             case .success():
-                print("Downloaded to Database")
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
         
+
     }
 }
+
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.identifier, for: indexPath) as? TitleCollectionViewCell else {
             return UICollectionViewCell()
         }
@@ -86,7 +86,6 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         cell.configure(with: model)
         
         return cell
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -101,25 +100,25 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
             return
         }
         
-        APICaller.shared.getMovie(with: titleName + "trailer") { [weak self] result in
+        
+        APICaller.shared.getMovie(with: titleName + " trailer") { [weak self] result in
             switch result {
-            case . success(let videoElement):
+            case .success(let videoElement):
                 
                 let title = self?.titles[indexPath.row]
                 guard let titleOverview = title?.overview else {
                     return
                 }
-                
                 guard let strongSelf = self else {
                     return
                 }
-                
                 let viewModel = TitlePreviewViewModel(title: titleName, youtubeView: videoElement, titleOverview: titleOverview)
                 self?.delegate?.collectionViewTableViewCellDidTapCell(strongSelf, viewModel: viewModel)
                 
             case .failure(let error):
                 print(error.localizedDescription)
             }
+            
         }
     }
     
@@ -136,5 +135,9 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         
         return config
     }
+    
+    
 
+    
+    
 }
